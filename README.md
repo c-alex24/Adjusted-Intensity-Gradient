@@ -19,3 +19,4 @@ In order to run this code you need a file in long format that includes 2 columns
   P02   68
   P02   45
   
+This project is licensed under the terms of the MIT license.
