@@ -1,5 +1,5 @@
 # Adapted-Intensity-Gradient
-This code is used to generate the adjusted intensity gradient proposed in "Adapting the Intensity Gradient for Use with Count-Based Accelerometry Data in Children and Adolescents"
+This code is used to generate the adjusted intensity gradient proposed by Alexander et al in https://www.mdpi.com/1424-8220/24/10/3019
 
 The intensity gradient was designed for use with raw acceleration data (gravitational units). This code generates intensity gradients from ActiGraph count data. 
 
