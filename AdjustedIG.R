@@ -3,32 +3,23 @@
 # Christina Alexander
 # MyMSK - Faculty of Kinesiology, University of Calgary
 # June 28, 2023 - revised Dec 6, 2024
-
 # remove objects 
 rm(list = ls())
-
 # load libraries
 library(ggplot2)
 library(dplyr)
-
 # set path name for working directory as the folder where your acceleration data is stored
 setwd("")
-
 # load data frame with acceleration data (counts and accelerations)
 data <- read.csv("NAMEOFFILE.csv")
-
 # create and open pdf to export the BA plot
 pdf(file = "NAMEOFPDF.pdf")
-
 # create data frame to store intensity gradient 
 accIG <- data.frame(ID = c(unique(data$ID)))
-
 ## INTENSITY GRADIENT FOR COUNTS ##
 # number of bins used taken from Rowlands et al: Beyond Cut Points: Accelerometer Metrics that Capture the Physical Activity Profile 
-
 # set incrementing variable
 i = 1
-
 # create an IG for each participant by looping once per participant 
 for(x in unique(data$ID)){
   
@@ -94,13 +85,10 @@ for(x in unique(data$ID)){
   i = i + 1
   
 }
-
 ## INTENSITY GRADIENT FOR COUNTS - ADJUSTED BINS ##
 # number of bins adjusted to match number of points on the count IG graph to the number that appear on the acc IG graph
-
 # set incrementing variable
 i = 1
-
 # create an IG for each participant by looping once per participant 
 for(x in unique(data$ID)){
   
@@ -166,11 +154,8 @@ for(x in unique(data$ID)){
   i = i + 1
   
 }
-
 ## EXPORT TABLE & FIGURES ##
-
 # export the IG values to output 
 write.csv(accIG, file = "NAMEOFCSV.csv", row.names = FALSE)
-
 # save and close pdf
 dev.off()
